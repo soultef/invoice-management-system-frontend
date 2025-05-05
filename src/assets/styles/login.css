@@ -1,0 +1,110 @@
+/* Base Container Styling */
+.login-container {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Title */
+  .login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #333;
+  }
+  
+  /* Form Layout */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Grouping Fields */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  /* Inputs */
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.25rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .login-form input[type="email"]:focus,
+  .login-form input[type="password"]:focus {
+    border-color: #0077cc;
+    outline: none;
+  }
+  
+  /* Checkbox Group */
+  .checkbox-group {
+    flex-direction: row; /* override column layout */
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Checkbox Styling */
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #0077cc; /* modern checkbox styling */
+    cursor: pointer;
+  }
+  
+  /* Checkbox Label */
+  .checkbox-group label {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* Links */
+  .link {
+    color: #0077cc;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Register Prompt */
+  .register-prompt {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .register-prompt a {
+    margin-left: 0.25rem;
+    font-weight: 500;
+  }
+  
