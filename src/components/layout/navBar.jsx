@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../../assets/styles/navBar.css'; // Make sure this path is correct
+import '../../assets/styles/navBar.css'; 
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,9 +27,9 @@ function NavBar() {
 
         {/* Navbar Links */}
         <div className={`navbar-section navbar-links ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#">Dashboard</a>
-          <a href="#">Invoices</a>
-          <a href="#">Sign In / Sign Up</a>
+        <Link to="/dashboard">Dashboard</Link>
+          <Link to="/invoices">Invoices</Link>
+          <Link to="/login">Login/Register</Link>
         </div>
 
         {/* Hamburger Menu */}
