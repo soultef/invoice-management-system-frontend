@@ -1,24 +1,47 @@
-import React from 'react';  
-import '../../assets/styles/navBar.css'
+import React, { useState } from 'react';
+import '../../assets/styles/navBar.css'; // Make sure this path is correct
 
 function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
+
   return (
-    <div className='nav-container'>
-        <div className='logo-container'>
-        <img src='/logo.png' alt="InvoPro" />
+    <nav className="navbar-container" role="navigation" aria-label="Main navigation">
+      <div className="navbar-list">
+        {/* Logo */}
+        <div className="navbar-section logo">
+          <a href="#">InvoPro</a>
         </div>
-        <div className='search-input-container'>
-            <form>
-            <input type='search' placeholder='search invoices...'/>
-            <input type='submit' value='search'/>
-            </form>
+
+        {/* Search Bar */}
+        <div className="navbar-section search-bar">
+          <form>
+            <input type="search" aria-label="Search for products" placeholder="Search..." />
+            <input type="submit" value="Search" />
+          </form>
         </div>
-        <div className='sign-in-up-container'>
-            <a href='#'>Sign in / Sign up</a>
+
+        {/* Navbar Links */}
+        <div className={`navbar-section navbar-links ${isMenuOpen ? 'open' : ''}`}>
+          <a href="#">Dashboard</a>
+          <a href="#">Invoices</a>
+          <a href="#">Sign In / Sign Up</a>
         </div>
-     
-    </div>
-  )
+
+        {/* Hamburger Menu */}
+        <div className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`}
+         onClick={toggleMenu} aria-label="Toggle navigation menu">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+
+      </div>
+    </nav>
+  );
 }
 
-export default NavBar
+export default NavBar;
