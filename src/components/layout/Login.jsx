@@ -32,20 +32,22 @@ function Login() {
             aria-label="Password"
             required
           />
-        </div>
+         </div>
 
-        {/* Remember Me Checkbox */}
-        <div className="form-group checkbox-group">
-          <input type="checkbox" id="remember" name="remember" />
-          <label htmlFor="remember">Remember me</label>
-        </div>
+         <div className="checkbox-forgotpassword">
+          {/* Remember Me Checkbox */}
+          <div className="checkbox-group">
+            <input type="checkbox" id="remember" name="remember" />
+            <label htmlFor="remember">Remember me</label>
+          </div>
 
-        {/* Forgot Password */}
-        <div className="form-group">
-          <Link to="/forgot-password" className="link">
+          {/* Forgot Password */}
+          <Link to="/forgot-password" className="link forgot-password-link">
             Forgot password?
           </Link>
         </div>
+
+        
 
         {/* Submit Button */}
         <div className="form-group">
