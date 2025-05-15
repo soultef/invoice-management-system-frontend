@@ -97,7 +97,7 @@ This is the frontend for the Invoice Management System, built with React. It int
 
 ## 📦 Folder Structure
 
----
+```
 react-app/
 │
 ├── public/                     # Static files like index.html, favicon, etc.
@@ -157,7 +157,7 @@ react-app/
 ├── package.json
 └── README.md
 
----
+```
 
 
 ## 🧪 Testing
